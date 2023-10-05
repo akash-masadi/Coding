@@ -1,0 +1,53 @@
+Write a program to print the individual digits of a given 'n'
+
+Examples:
+6974
+
+4
+7
+9
+6
+
+120950
+0
+5
+9
+0
+2
+1
+Write a program to print the SUM of the digits of a given 'n'
+
+Examples:
+6974
+
+4+7+9+6
+Output
+26
+
+
+120950
+0+5+9+0+2+1
+17
+
+
+
+Harshad Number
+In mathematics, a harshad number (or Niven number) in a given number base is an integer that is divisible by the sum of its digits when written in that base. Harshad numbers in base n are also known as n-harshad (or n-Niven) numbers. Harshad numbers were defined by D. R. Kaprekar, a mathematician from India.
+
+
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42, 45, 48, 50, 54, 60, 63, 70, 72, 80, 81, 84, 90, 100, 102, 108, 110, 111, 112, 114, 117, 120, 126, 132, 133, 135, 140, 144, 150, 152, 153, 156, 162, 171, 180, 190, 192, 195, 198, 200, 201, 204 
+
+1729 = 19 * 91
+
+
+Armstrong Number
+
+Armstrong Number Generation
+
+Reverse a Number
+
+Palindrome Number
+
+ADAM number
+
+ADAM number Generation

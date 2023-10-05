@@ -1,12 +1,34 @@
 /*
-*  Input :
-* 345678901234
-* ^^^^^^^^^^^
-* |||||||||||
-* 00000000011
-* 12345678901
-*  output : 34 198765 234
- */
+David and Ross both work in the same office but in different departments. David needs to share a password
+protected file with Ross. David made a minor change to the password so that file cannot be accessed by
+anyone else. He interchanged a few digits of the password and shared the new password with a hint to
+generate the actual password
+Hint:
+Reverse all the elements from point A to point B (both A and B inclusive), where point A and B are given
+PASSWORD is a Positive Integer
+Write an algorithm to reverse the elements of the password to get the actual password so that file can be
+opened
+Input
+First Line  - Converted Password
+The next line consists of two space separated integers - startPoint and endPoint representing two points
+A and B to reverse the elements
+Output
+Print The Original Password
+Example :
+Position 123456789012
+         000000000111
+         345689012345
+         341098652345
+3 8
+Output:
+341098652345
+10000 <= n <= 1000000000000000000
+
+  345678
+345689012345
+3 8
+
+*/
 class numberRearrange
 {
     public static long reverse(long num)
