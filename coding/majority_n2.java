@@ -2,9 +2,9 @@
 Return the mejority element greater than give (array.lenght)/2
  * Boyce-Moore's Majority Voting Algorithm
  * Given :- 5 6 6 7 6 9 6
- *  return 7 as 7 is present 4 > (n/2)
+ *  return 6 as 6 is present 4 > (n/2)
  */
-public class majority {
+public class majority_n2 {
     public static void main(String[] args) {
         // int[] arr = { 5,7,6,8,9,6,6,7,6,6,8,6,9,6};
         //cou         1 1 1 1 1 1 2 1 2 3 2 3 2 3
@@ -30,7 +30,7 @@ public class majority {
                 majority = currentNum;
             }
         }
-        if(count>1)
+        if(count>0)
         {
             System.out.println(majority);
         }
