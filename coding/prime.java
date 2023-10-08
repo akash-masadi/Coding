@@ -31,8 +31,8 @@ public class prime {
         else  System.out.println("Not Prime");
         end_milli=System.currentTimeMillis();
         end_nano=System.nanoTime();
-        System.out.println("Time : "+(end_milli-start_milli));
-        System.out.println(((float)end_nano-start_nano)/1000000);
+        System.out.println("Time : "+(end_milli-start_milli)/1000.0);
+        System.out.println((end_nano-start_nano));
     }
     
 }
