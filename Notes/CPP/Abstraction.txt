@@ -1,0 +1,79 @@
+Abstraction is of two types :-
+1.Data Abstraction
+2.Functional Abstraction
+
+
+Data Abstraction:-
+Hiding the irrelevant data to the user;
+
+Best example of data abstraction is : Epoch (the beginning of a period in the history of someone or something) Time
+Generally, in storing a file with some metadata like created/modified/last accessed time and date is very crucial.
+ 
+Intead of storing DD,MM,YYYY in seperate variable, they can we stored in one single "UNSIGNED SHORT INT (2 BYTES - 16 BITS)"
+To store a date DD MM YYYY
+DD -> 1 to 31 2^5 that means we require only 5 bits
+MM -> 1 to 12 2^4 that means we require only 4 bits 
+YYYY -> 0 to till date (2023) we require we need 16 bits -> 2 Bytes
+instead Take a point in time and count the no. of years from them 
+in case of Microsoft epoch time. 
+
+""
+The 18-digit Active Directory timestamps, also named 'Windows NT time format', 'Win32 FILETIME or SYSTEMTIME' or NTFS file time. These are used in Microsoft Active Directory for pwdLastSet, accountExpires, LastLogon, LastLogonTimestamp, and LastPwdSet. The timestamp is the number of 100-nanosecond intervals (1 nanosecond = one billionth of a second) since Jan 1, 1601 UTC.
+
+The current LDAP/Win32 FILETIME is  133414373440000000 or in scientific notation 13341437344e7 (11-10-2023 00:20:32).
+Source :- https://www.epochconverter.com/ldap
+Other examples :- UNIX ---- https://www.epochconverter.com/ 
+"""
+
+YYYY = Current_year - (a point in past time year)
+In case of Microsoft, 01-01-1601 UTC 
+
+15 14 13 12 11 10 09 | 08 07 06 05 | 04 03 02 01 00
+		    	 5 bits    <------DD------->
+      	      4 bits  <----MM------>
+<-----YYYY---------> 7 bits
+
+Above example is Big Endian Method.
+Formula for Date :-
+(YYYY-1980) * 512 + MM *32 + DD
+	      2^9       2^5
+
+
+15 14 13 12 11 | 10 09 08 07 06 05 | 04 03 02 01 00
+		    	 5 bits     <-----SS/2-----> (00 - 29)
+      6 bits  <--------MM---------> ( 00 - 59)  
+<-----HH---->  4 bits (0-24)
+
+Formula for Time :-
+HH * 2048 + MM *32 + SS/2;
+     2^11       2^5
+
+HH requires  5 bits
+MM requires  6 bits
+SS requires  6 bits
+	total 17 bits
+Thats why Seconds is reduced to half. Leaving with One Second Precision.(in case of odd number of seconds.
+
+
+
+Note :-
+Endianness is similar to languages written from left to right or right to left.
+So, in computing, we define endianness as the order of bytes inside a word of data stored in computer memory. 
+$$Big-endian$$ and $$little-endian$$ are the two main ways to represent endianness. 
+As we can see, in the case of big-endian, we locate the most significant byte of the 32-bit integer at the byte with the lowest address in the memory. The rest of the data is located in order in the next three bytes in memory.
+
+On the other hand, when we look at the little-endian, in that case, we locate the least significant byte of the data at the byte with the lowest address. After that, we find the rest of the data in the order in the next three bytes in memory.
+
+
+Internally, they count seconds from a certain date (the “zero second” is on 00:00:00 of 1 January 1970) and convert the number when appropriate (i.e. to display it to a human user). It is stored as a signed integer. Right now as I’m writing, it’s 1576509519 o’clock.
+
+In older 32bit systems there are enough seconds for a total of 136 years (half before 1970 and half after), but the signed integer will overflow in 2038 (that might cause problems if there still are old 32bit systems running).
+
+In newer 64bit systems, the problem is solved (we have several times the age of the universe before we run out of time!)
+ -----------------------
+This is Data abstraction
+------------------------
+
+Related program :- "C:\myStuff\CRT\struct_date_v2.cpp"
+
+Functional abstraction :-

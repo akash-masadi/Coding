@@ -1,0 +1,33 @@
+Reference Variable & :-
+It creates a contant pointer to a constant integer.
+"Aliasing" - Akash Masadi Alias Maximus
+
+
+Indirection ( * ) Operator => The unary * operator—commonly referred to as the indirection
+operator or dereferencing operator—returns an lvalue representing
+the object to which its pointer operand points. 
+
+Reference variable / Address ( & ) Operator =>
+The address operator ( & ) is a unary operator that obtains the
+memory address of its operand.
+
+In C++, & i introced by focusing which is already present in C.
+In C :
+ 1]
+int const ptr;
+	|         >---- they both imply the same " a ptr variable which is a (constant integer type / integer constant type {both imply the same})"
+ const int ptr;
+
+2]
+int const *ptr;
+	|         >---- they both imply the same " a ptr is a pointer variable which points a (constant integer type / integer constant type)"
+ const int *ptr;
+
+3]
+const int * const ptr;
+
+This exactly what the Reference variable implementation is.
+
+This is a constant pointer variable pointing towards a integer constant / constant integer.
+
+A ---> B ------> (memory location) 0f5a7b9bc9;
