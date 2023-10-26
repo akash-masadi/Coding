@@ -4,6 +4,26 @@
  * 32 % 2 == 0
  * 321 % 3 == 0 
  * Etc.....
+ * 
+ * 
+ * 
+ * Time taken :-
+ * PS C:\myStuff\coding> java Pandigital.java   
+    3816547290
+    Nano Seconds: 1002400
+
+    PS C:\myStuff\coding> java Pandigital_V3.java
+    3816547290
+    Nano Seconds: 951400
+
+    PS C:\myStuff\coding> java Pandigital.java   
+    3816547290
+    Nano Seconds: 1127400
+    
+    PS C:\myStuff\coding> java Pandigital_V3.java
+    3816547290
+    Nano Seconds: 1116100
+ *
  */
 public class Pandigital_V3 {
     public static void helper(int[][] possible,int[] used, long num, int digit)
