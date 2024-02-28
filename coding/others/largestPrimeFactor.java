@@ -28,7 +28,7 @@
  */
 public class largestPrimeFactor{
 public static void main(String[] args) {
-    long number = 750;
+    long number = 906609;
     long currentPrime=2;
     long max=0;
     while(currentPrime<=number)
